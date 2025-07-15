@@ -1,5 +1,4 @@
-
-        :root {
+:root {
             --cafe-noir: #2a1a0d;
             --cafe-marron: #5e3a1e;
             --cafe-clair: #a67c52;
@@ -7,8 +6,7 @@
             --cafe-text: #333333;
             --blanc: #ffffff;
         }
-
-        /* Reset et styles de base */
+        
         * {
             margin: 0;
             padding: 0;
@@ -61,7 +59,7 @@
             transform: translateY(-2px);
         }
 
-        /* Header */
+
         header {
             background-color: var(--blanc);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -106,11 +104,10 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(42, 26, 13, 0.7), rgba(42, 26, 13, 0.7)), 
-                        url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+                        url('https://static.tildacdn.com/tild6661-3538-4530-a561-396339333533/Trouver-du-cafe_-tor.jpg') no-repeat center center/cover;
             color: var(--blanc);
             display: flex;
             align-items: center;
@@ -134,7 +131,6 @@
             margin-bottom: 30px;
         }
 
-        /* Section Spécialités */
         .specialties {
             padding: 100px 0;
             background-color: var(--blanc);
@@ -153,6 +149,7 @@
         .section-title p {
             max-width: 700px;
             margin: 0 auto;
+            font-weight: 900;
         }
 
         .coffee-grid {
@@ -208,7 +205,6 @@
             color: var(--cafe-marron);
         }
 
-        /* Section À Propos */
         .about {
             padding: 100px 0;
             background-color: var(--cafe-creme);
@@ -242,7 +238,7 @@
             margin-bottom: 20px;
         }
 
-        /* Section Contact */
+
         .contact {
             padding: 100px 0;
             background-color: var(--blanc);
@@ -282,7 +278,7 @@
             height: 150px;
         }
 
-        /* Footer */
+
         footer {
             background-color: var(--cafe-noir);
             color: var(--blanc);
@@ -332,7 +328,7 @@
             padding-top: 20px;
         }
 
-        /* Responsive Design */
+
         @media (max-width: 992px) {
             .about-container,
             .contact-container {
@@ -383,4 +379,113 @@
                 font-size: 18px;
             }
         }
-    
+         .item{
+              font-weight: 900;
+              font-variant-caps: small-caps;
+            }
+.btn {
+ width: 6.5em;
+ height: 2.3em;
+ margin: 0.5em;
+ background: black;
+ color: white;
+ border: none;
+ border-radius: 0.625em;
+ font-size: 30px;
+ font-weight: bold;
+ cursor: pointer;
+ position: relative;
+ z-index: 1;
+ overflow: hidden;
+}
+button:hover {
+ color: black;
+}
+button:after {
+ content: "";
+ background: white;
+ position: absolute;
+ z-index: -1;
+ left: -20%;
+ right: -20%;
+ top: 0;
+ bottom: 0;
+ transform: skewX(-45deg) scale(0, 1);
+ transition: all 0.5s;
+}
+button:hover:after {
+ transform: skewX(-45deg) scale(1, 1);
+ -webkit-transition: all 0.5s;
+ transition: all 0.5s;
+}
+.social-card {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgb(255, 255, 255);
+  padding: 20px 25px;
+  border-radius: 14px;
+}
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+  z-index: 2;
+}
+.BG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: 1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all 0.3s;
+  font-size: 0px;
+}
+.github .BG {
+  background: #181818;
+}
+.linkdin .BG {
+  background: #0077b5;
+}
+.whatsapp .BG {
+  background: #075e54;
+}
+.discord .BG {
+  background: #7289da;
+}
+.Btn:hover .BG {
+  transform: scale(1.5);
+  font-size: 20px;
+  color: white;
+}
+.Btn:hover .svgContainer {
+  border: 1px solid rgba(216, 216, 216, 0.466);
+  background-color: rgba(209, 209, 209, 0.466);
+  backdrop-filter: blur(4px);
+}
